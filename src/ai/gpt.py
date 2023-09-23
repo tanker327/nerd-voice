@@ -99,8 +99,8 @@ class GPT():
         LOG.debug("Start sending request to OpenAI API.")
         audio_file = open(audio_file_path, "rb")
         transcript_response = openai.Audio.transcribe(OpenAIModel.WHISPER1.value, audio_file, prompt=prompt)
-        LOG.debug(transcript_response)
         transcript = transcript_response['text']
+        LOG.debug('Transcript script: '+transcript)
         return transcript 
     
     def load_models(self):
