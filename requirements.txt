@@ -11,6 +11,7 @@ loguru==0.7.2
 multidict==6.0.4
 numpy==1.26.0
 openai==0.28.0
+OpenCC==0.2
 pycparser==2.21
 pydub==0.25.1
 pyperclip==1.8.2
