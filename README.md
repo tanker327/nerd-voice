@@ -8,4 +8,10 @@ Convert your voice to text through OpenAsI API
 1. `pipenv shell`
 1. `pipenv install`
 1. `python src/main.py`
-s
+
+
+## Ubuntu
+You may need to install additional lib to make it work:
+
+`sudo apt-get update`
+`sudo apt-get install xclip portaudio19-dev ffmpeg`
