@@ -76,7 +76,9 @@ class VoiceApp:
             self.audio_data = []
 
             self.stream = sd.InputStream(
-                callback=self.callback, channels=2, samplerate=self.fs
+                callback=self.callback,
+                channels=1,  # Changed from 2 to 1
+                samplerate=self.fs
             )
             self.stream.start()
         else:
@@ -123,7 +125,7 @@ class VoiceApp:
             LOG.debug("mp3 file created.")
             
             ##====== insert mp3 file path here ======##
-            ##temp_mp3 = "/Users/ericwu/Downloads/rich_dad.mp3"
+            ## temp_mp3 = "/Users/ericwu/Downloads/study.mp3"
             ##========================================##
 
             result = GPT4.transcribe(f"{temp_mp3}")
